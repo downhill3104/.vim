@@ -1,0 +1,9 @@
+syntax on
+set number
+set clipboard+=unnamed
+set fileencodings=ucs-bom,euc-jp,sjis,cp932,utf-8
+colorscheme wombat256mod
+set hidden
+set whichwrap=b,s,[,],<,>
+set backspace=indent,eol,start
+set autochdir
