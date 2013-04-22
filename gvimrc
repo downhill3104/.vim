@@ -31,20 +31,20 @@ set autochdir
 set noshowmatch
 set guicursor=a:blinkon0
 
-" ƒ}ƒEƒX‚ğ–³Œø‚É‚·‚é
+" ãƒã‚¦ã‚¹ã‚’ç„¡åŠ¹ã«ã™ã‚‹
 set mouse=
 
-" ‰E‘¤‚ÌƒXƒNƒ[ƒ‹ƒo[‚ğ–³Œø‚É‚·‚é
+" å³å´ã®ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ãƒãƒ¼ã‚’ç„¡åŠ¹ã«ã™ã‚‹
 set guioptions-=r
 
-" mac gvim ‚Ìİ’è
+" mac gvim ã®è¨­å®š
 if has('mac')
 	colorscheme solarized
 	set background=light
 elseif has('windows')
 	colorscheme wombat256mod
 	set gfn=MS_Gothic:h10:cSHIFTJIS
-	cd C:\Users\ss-yamashita\Documents
+	cd C:Â¥UsersÂ¥ss-yamashitaÂ¥Documents
 
 	" use scp
 	let g:netrw_cygwin = 1
@@ -82,15 +82,15 @@ function! s:Javac()
 	let l:path=expand("%")
 	"let l:syn="javac ".l:path
 	let l:syn="javac -J-Dfile.encoding=UTF-8 ".l:path
-	"let l:syn="source ~/.bashrc; javac ".l:path
+	"let l:syn="source â€¾/.bashrc; javac ".l:path
 	let l:dpath=split(l:path,".java$")
 	let l:ret=system(l:syn)
 	if l:ret==""
 		"let l:syn="java ".l:dpath[0]
 		let l:syn="java -Dfile.encoding=UTF-8 ".l:dpath[0]
-		"let l:syn="source ~/.bashrc; java ".l:dpath[0]
+		"let l:syn="source â€¾/.bashrc; java ".l:dpath[0]
 		let l:ret=system(l:syn)
-		echo "$ ".l:syn."\r\n".l:ret
+		echo "$ ".l:syn."Â¥rÂ¥n".l:ret
 	else
 		echo l:ret
 	endif
@@ -104,7 +104,7 @@ function! s:Gcc()
 	if l:ret==""
 		let l:syn="a.exe"
 		let l:ret=system(l:syn)
-		echo "$ ".l:syn."\r\n".l:ret
+		echo "$ ".l:syn."Â¥rÂ¥n".l:ret
 	else
 		echo l:ret
 	endif
